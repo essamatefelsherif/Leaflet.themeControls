@@ -6,7 +6,7 @@ A set of themeControls that extend the Leaflet native controls, and also additio
 
 | Class / Constructor                     | Factory function          | Description            |
 |-----------------------------------------|---------------------------|------------------------|
-| > L.Control                               |                           |                        |
+| > `L.Control`                               |                           |                        |
 |	L.Control.Attribution             | L.control.attribution     | Leaflet native control |
 |		L.ThemeAttributionControl | L.themeAttributionControl | themeControl           |
 |	L.Control.Layers                  | L.control.layers          | Leaflet native control |
