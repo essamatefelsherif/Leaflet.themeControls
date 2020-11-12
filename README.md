@@ -1,11 +1,11 @@
 # Leaflet.themeControls
 
-This is a set of controls extending from Leaflet native controls, in addition to a set of other controls.
+A set of themeControls that extend the Leaflet native controls, and also additional controls, to modify the shape of user interface according to a predefined theme. A themControl is a one whose on-screen shape can be selected by the associated css files and images provided.
 
-## Controls
+## Control Class Hierarchy
 
-## Class / Constructor						Factory function
-## -------------------						----------------
+| Class / Constructor | Factory function | Description |
+| --------------------|------------------|-------------|
 L.Control
 	L.Control.Attribution				L.control.attribution
 		L.ThemeAttributionControl			L.themeAttributionControl
