@@ -4,26 +4,24 @@ A set of themeControls that extend the Leaflet native controls, and also additio
 
 ## Control Class Hierarchy
 
-| Class / Constructor | Factory function | Description |
-| --------------------|------------------|-------------|
-L.Control
-	L.Control.Attribution				L.control.attribution
-		L.ThemeAttributionControl			L.themeAttributionControl
-
-	L.Control.Layers					L.control.layers
-		L.ThemeLayersControl				L.themeLayersControl
-
-	L.Control.Scale						L.control.scale
-
-	L.Control.Zoom						L.control.zoom
-		L.ThemeZoomControl				L.themeZoomControl
-		
-	L.Control.Screen					L.control.screen
-		L.ThemeScreenControl				L.themeScreenControl
-		
-	L.Control.Bookmark					L.control.bookmark
-		L.ThemeBookmarkControl			L.themeBookmarkControl
-		
-	L.Control.MessageBox				L.control.messageBox
-		
-	L.Control.Theme						L.control.theme
+| Class / Constructor                     | Factory function          | Description            |
+|-----------------------------------------|---------------------------|------------------------|
+| L.Control                               |                           |                        |
+|	L.Control.Attribution             | L.control.attribution     | Leaflet native control |
+|		L.ThemeAttributionControl | L.themeAttributionControl | themeControl           |
+|                                         |                           |                        |
+|	L.Control.Layers                  | L.control.layers          | Leaflet native control |
+|		L.ThemeLayersControl      | L.themeLayersControl      | themeControl           |
+|                                         |                           |                        |
+|	L.Control.Zoom                    | L.control.zoom            | Leaflet native control |
+|		L.ThemeZoomControl        | L.themeZoomControl        | themeControl           |
+|                                         |                           |                        |
+|	L.Control.Screen                  | L.control.screen          | Additional control     |
+|		L.ThemeScreenControl      | L.themeScreenControl      | themeControl           |
+|                                         |                           |                        |
+|	L.Control.Bookmark                | L.control.bookmark        | Additional control     |
+|		L.ThemeBookmarkControl    | L.themeBookmarkControl    | themeControl           |
+|                                         |                           |                        |
+|	L.Control.MessageBox              | L.control.messageBox      | themeControl           |
+|                                         |                           |                        |
+|	L.Control.Theme                   | L.control.theme           | themeControl           |
