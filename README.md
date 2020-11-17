@@ -2,6 +2,12 @@
 
 A set of **themeControls** that extend the Leaflet native controls, and other additional controls, in order to modify the on-screen shape of the control as defined by the associated css and image files provided.
 
+The **themeControls** will be most useful in providing your web page the cultural touch of the location.
+
+## Demo
+
+
+
 ## Control Class Hierarchy
 
 | Class / Constructor                   | Factory function            | Description            | 
@@ -23,7 +29,8 @@ A set of **themeControls** that extend the Leaflet native controls, and other ad
 
 ## Usage
 
-In order to use this plugin, include the essential JS and CSS in your page as follows:
+In order to use this plugin, include the essential [JS](src/theme-leaflet-controls.js) and [CSS](src/css/theme-egy-leaflet-controls.css) files in your HTML page as follows:
+
 ```
 <html>
     <head>
