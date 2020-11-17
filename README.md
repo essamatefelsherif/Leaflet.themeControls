@@ -23,5 +23,17 @@ A set of **themeControls** that extend the Leaflet native controls, and other ad
 
 ## Usage
 
+In order to use this plugin, include the essential JS and CSS in your page as follows:
+```
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+        <link rel="stylesheet" type="text/css" href="src/css/theme-egy-leaflet-controls.css" />
+
+        <script type="text/javascript" src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+        <script type="text/javascript" src="src/theme-leaflet-controls.js"></script>
+    </head>
+```
+
 ## Supported Leaflet Versions
 
