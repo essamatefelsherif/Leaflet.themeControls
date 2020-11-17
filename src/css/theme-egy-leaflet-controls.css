@@ -62,7 +62,7 @@
 	border: 1px solid #400000;
 	border-radius: 5px;
 	box-shadow: 5px 5px 15px darkgray;
-	
+
 	transition: 0;
 }
 
@@ -79,7 +79,6 @@
 .egy-leaflet-control-layer-form-11{ background-image: url('./img/egy/egy_texture_marbl-1.png'); }
 .egy-leaflet-control-layer-form-12{ background-image: url('./img/egy/egy_texture_paper-1.jpg'); }
 .egy-leaflet-control-layer-form-13{ background-image: url('./img/egy/egy_texture_paper-2.jpg'); }
-
 
 .egy-leaflet-control-layer-base{ }
 .egy-leaflet-control-layer-overlay{ }
@@ -203,11 +202,11 @@
 	content : url('./img/egy/egy_ankh-1_cl.png');
 }
 
-.egy-leaflet-disabled.egy-leaflet-control-screen-button, .leaflet-touch .egy-leaflet-disabled.egy-leaflet-control-screen-button{
+.leaflet-disabled.egy-leaflet-control-screen-button, .leaflet-touch .leaflet-disabled.egy-leaflet-control-screen-button{
 	  opacity: 0.5;
 }
 
-.egy-leaflet-disabled.egy-leaflet-control-screen-button:hover, .leaflet-touch .egy-leaflet-disabled.egy-leaflet-control-screen-button:hover{
+.leaflet-disabled.egy-leaflet-control-screen-button:hover, .leaflet-touch .leaflet-disabled.egy-leaflet-control-screen-button:hover{
 	background-image: url(./img/egy/egy_ankh-2_bw.png);
 }
 
@@ -223,11 +222,11 @@
 	background-image: url(./img/egy/egy_ankh-1_cl.png);	
 }
 
-.leaflet-fullscreen-on .egy-leaflet-disabled.egy-leaflet-control-screen-button, .leaflet-touch.leaflet-fullscreen-on .egy-leaflet-disabled.egy-leaflet-control-screen-button{
+.leaflet-fullscreen-on .leaflet-disabled.egy-leaflet-control-screen-button, .leaflet-touch.leaflet-fullscreen-on .leaflet-disabled.egy-leaflet-control-screen-button{
 	opacity: 0.5;
 }
 
-.leaflet-fullscreen-on .egy-leaflet-disabled.egy-leaflet-control-screen-button:hover, .leaflet-touch.leaflet-fullscreen-on .egy-leaflet-disabled.egy-leaflet-control-screen-button:hover{
+.leaflet-fullscreen-on .leaflet-disabled.egy-leaflet-control-screen-button:hover, .leaflet-touch.leaflet-fullscreen-on .leaflet-disabled.egy-leaflet-control-screen-button:hover{
 	background-image: url(./img/egy/egy_ankh-1_bw.png);	
 }
 
@@ -270,7 +269,7 @@
 	height: 44px;
 
 	cursor: pointer;
-	
+
 	opacity: 1.0;
 	transition: 0.3s;
 }
@@ -282,7 +281,7 @@
 .leaflet-control-messagebox-link{
 	display: block;
 	width: 100%; height: 100%;
-	
+
 	font-family: "Lucida Console, Monaco, monospace";
 	font-size: 26px;
 	font-weight: bold;
@@ -294,7 +293,6 @@
 	line-height: 44px;
 }
 
-
 .leaflet-control-messagebox-expanded{
 	width: 300px;
 	height: 225px;
@@ -302,7 +300,7 @@
 	padding: 6px 10px 6px 6px;
 	padding: 6px 10px;
 	color: #333;
-	
+
 	opacity: 0.8;
 	transition: 0.3s;
 }
@@ -354,7 +352,7 @@
 	height: 225px;
 	background-size: 100% 100%;
 	background-image: url('./img/egy/egy_scroll-1_1.png');
-	
+
 	opacity: 0.8;
 	transition: 0.3s;
 }
@@ -369,7 +367,7 @@
 .egy-leaflet-control-messagebox-link{
 	display: block;
 	width: 100%; height: 100%;
-	
+
 	font-family: "Lucida Console, Monaco, monospace";
 	font-size: 0;
 	font-weight: bold;
@@ -380,7 +378,6 @@
 	vertical-align: center;
 	line-height: 44px;
 }
-
 
 .egy-leaflet-control-messagebox-msg{
 	width: 75%; margin: auto;
@@ -419,7 +416,7 @@
 	height: 44px;
 }
 
-.egy-leaflet-disabled.egy-leaflet-control-bookmark-link{
+.leaflet-disabled.egy-leaflet-control-bookmark-link{
 	opacity: 0.5;
 }
 
@@ -432,7 +429,7 @@
 	background-image: url('./img/egy/egy_eye_3.png');
 }
 
-.egy-leaflet-disabled.egy-leaflet-control-bookmark-link:hover{
+.leaflet-disabled.egy-leaflet-control-bookmark-link:hover{
 	opacity: 0.5;
 }
 
@@ -443,7 +440,7 @@
 	background: #fff;
 	border-radius: 5px;
 }
-	
+
 .leaflet-bar .std-leaflet-control-link, .std-leaflet-control-link{
 	background-image: url('./img/leaflet.png');
 	width: 36px;
@@ -608,7 +605,6 @@
 		}
 }
 
-	} 
 /* Large devices (laptops/desktops, 992px and up) */
 	@media only screen and (min-width: 992px) {  
 		.egy-leaflet-control-layer-form-11, .egy-leaflet-control-layer-form-12, .egy-leaflet-control-layer-form-13{
