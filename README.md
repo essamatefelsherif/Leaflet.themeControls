@@ -1,10 +1,10 @@
 # Leaflet.themeControls
 
-A set of **themeControls** that extend the Leaflet native controls, and other additional controls, in order to modify the on-screen shape of the control as configured by the associated css and image files provided.
+A set of **themeControls** that extend the Leaflet native controls, and other additional controls, in order to modify the on-screen shape of the control as defined by the associated css and image files provided.
 
 ## Control Class Hierarchy
 
-| Class / Constructor                   | Factory function            | Description            |
+| Class / Constructor                   | Factory function            | Description            | 
 |---------------------------------------|-----------------------------|:----------------------:|
 | `L.Control`                           |                             |                        |
 | >>> `L.Control.Attribution`           | `L.control.attribution`     | Leaflet native control |
@@ -17,7 +17,11 @@ A set of **themeControls** that extend the Leaflet native controls, and other ad
 | >>>>>> `L.ThemeScreenControl`         | `L.themeScreenControl`      | **themeControl**       |
 | >>> `L.Control.Bookmark`              | `L.control.bookmark`        | Additional control     |
 | >>>>>> `L.ThemeBookmarkControl`       | `L.themeBookmarkControl`    | **themeControl**       |
-| >>> `L.Control.MessageBox`            | `L.control.messageBox`      | **themeControl**       |
+| >>> `L.Control.MessageBox`            | `L.control.messageBox`      | Additional control     |
+| >>>>>> `L.ThemeMessageBox`            | `L.themeMessageBox`         | **themeControl**       |
 | >>> `L.Control.Theme`                 | `L.control.theme`           | **themeControl**       |
 
+## Usage
+
+## Supported Leaflet Versions
 
