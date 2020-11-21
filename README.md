@@ -1,12 +1,13 @@
 # Leaflet.themeControls
 
-A set of **themeControls** that extend the Leaflet native controls, and other additional controls, in order to modify the on-screen shape of the control as defined by the associated css and image files provided.
+A set of **themeControls** that extend Leaflet native controls, and other additional controls, in order to modify the on-screen shape of the control as defined by the underlying css and image files provided.
 
-The **themeControls** will be most useful in providing your web page the cultural touch of the location.
+The use of **themeControls** will enhance the user interface of your web map by providing theme or cultural related icons.
 
 ## Demo
 
-
+1. [demo_1](https://career.essamonline.net) demonstrates the use of **themeControls** to provide a user interface related to *Ancient Egypt*.
+2. [demo_2](https://career.essamonline.net) demonstrates the use of **themeControls** to provide a user interface related to the *Alexandria City of Egypt*.
 
 ## Control Class Hierarchy
 
@@ -42,5 +43,20 @@ In order to use this plugin, include the essential [JS](src/theme-leaflet-contro
     </head>
 ```
 
+Each theme will be associated with a separate CSS file and linked image files. In order to build up your theme:
+
+1. Prepare the set of image files that will be linked to each of the **themeControls**.
+2. Assign a name to your theme, preferably 3 or 4 letters, example **'xyz'**.
+3. Rename the CSS file to reflect your theme **theme-xyz-leaflet-controls.css**.
+4. Within the **theme-xyz-leaflet-controls.css** file, replace each and every existence of my Ancient Egypt theme **'egy'** with yours **'xyz'**.
+5. Alter the links to the image files to link to your files.
+6. Include your CSS file in the HTML file as shown above.
+7. Use the new CSS class names to create the **themeControls** within the \<script> section of your HTML file.
+
+
+
 ## Supported Leaflet Versions
 
+## License
+
+This plugin is licensed under the MIT license, see the LICENSE file.
