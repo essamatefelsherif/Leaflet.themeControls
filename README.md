@@ -5,7 +5,7 @@ A set of **themeControls** that extend Leaflet native controls, and other additi
 Using **themeControls** within a web map will enhance the user interface with theme or cultural related icons.
 
 <div style="text-align: center;">
-    <a href="img/demo_egy.png" title="Ancient Egypt Theme"><img src="img/demo_egy.png"></a>
+    XXXXXXXXXXXXX<a href="img/demo_egy.png" title="Ancient Egypt Theme"><img src="img/demo_egy.png"></a>
 </div>
 
 <div style="text-align:center;">
