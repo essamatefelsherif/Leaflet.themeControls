@@ -4,7 +4,7 @@ A set of **themeControls** that extend Leaflet native controls, and other additi
 
 The use of **themeControls** will enhance the user interface of your web map by providing theme or cultural related icons.
 
-![](img/d1.png)![](img/d2.png) 
+![](img/d1.png)   ![](img/d2.png) 
 
 ## Demo
 
