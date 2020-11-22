@@ -9,7 +9,7 @@ Using **themeControls** within a web map will enhance the user interface with th
 </div>
 `   `
 <div style="text-align:center">
-	<a href="img/demo_alx.png" title="Alexandria City Theme"><img src="img/demo_egy.png"></a>
+	<a href="img/demo_alx.png" title="Alexandria City Theme"><img src="img/demo_alx.png"></a>
 </div>
 
 ## Demo
