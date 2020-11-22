@@ -1,27 +1,33 @@
 # Leaflet.themeControls
 
-A set of **themeControls** that extend Leaflet native controls, and other additional controls, in order to modify the on-screen shape of the control as defined by the underlying css and image files provided.
+A set of **themeControls** that extend Leaflet native controls, and other additional controls, in order to customize the on-screen shape of the control as defined by the underlying css and image files provided.
 
-The use of **themeControls** will enhance the user interface of your web map by providing theme or cultural related icons.
+Using **themeControls** within a web map will enhance the user interface with theme or cultural related icons.
 
-![](img/demo_egy.png)![](img/demo_alx.png) 
+<div style="text-align:center">
+	<a href="img/demo_egy.png" title="Ancient Egypt Theme"><img src="img/demo_egy.png"></a>
+</div>
+>`   `
+<div style="text-align:center">
+	<a href="img/demo_alx.png" title="Alexandria City Theme"><img src="img/demo_egy.png"></a>
+</div>
 
 ## Demo
 
-1. [demo_1](https://career.essamonline.net) demonstrates the use of **themeControls** to provide a user interface related to *Ancient Egypt*.
-2. [demo_2](https://career.essamonline.net) demonstrates the use of **themeControls** to provide a user interface related to the *Alexandria City of Egypt*.
+1. [demo_1](https://career.essamonline.net) demonstrates using **themeControls** to provide a user interface relevant to *Ancient Egypt*.
+2. [demo_2](https://career.essamonline.net) demonstrates using **themeControls** to provide a user interface relevant to the *Alexandria City of Egypt*.
 
 ## Control Class Hierarchy
 
 | Class / Constructor                   | Factory function            | Description            | 
 |---------------------------------------|-----------------------------|:----------------------:|
 | `L.Control`                           |                             |                        |
-| >>> `L.Control.Attribution`           | `L.control.attribution`     | Leaflet native control |
-| >>>>>> `L.ThemeAttributionControl`    | `L.themeAttributionControl` | **themeControl**       |
-| >>> `L.Control.Layers`                | `L.control.layers`          | Leaflet native control |
-| >>>>>> `L.ThemeLayersControl`         | `L.themeLayersControl`      | **themeControl**       |
 | >>> `L.Control.Zoom`                  | `L.control.zoom`            | Leaflet native control |
 | >>>>>> `L.ThemeZoomControl`           | `L.themeZoomControl`        | **themeControl**       |
+| >>> `L.Control.Layers`                | `L.control.layers`          | Leaflet native control |
+| >>>>>> `L.ThemeLayersControl`         | `L.themeLayersControl`      | **themeControl**       |
+| >>> `L.Control.Attribution`           | `L.control.attribution`     | Leaflet native control |
+| >>>>>> `L.ThemeAttributionControl`    | `L.themeAttributionControl` | **themeControl**       |
 | >>> `L.Control.Screen`                | `L.control.screen`          | Additional control     |
 | >>>>>> `L.ThemeScreenControl`         | `L.themeScreenControl`      | **themeControl**       |
 | >>> `L.Control.Bookmark`              | `L.control.bookmark`        | Additional control     |
@@ -47,18 +53,16 @@ In order to use this plugin, include the essential [JS](src/theme-leaflet-contro
 
 Each theme will be associated with a separate CSS file and linked image files. In order to build up your theme:
 
-1. Prepare the set of image files that will be linked to each of the **themeControls**.
+1. Prepare the set of image (png) files that will be linked to each of the **themeControls**.
 2. Assign a name to your theme, preferably 3 or 4 letters, example **'xyz'**.
-3. Rename the CSS file to reflect your theme **theme-xyz-leaflet-controls.css**.
-4. Within the **theme-xyz-leaflet-controls.css** file, replace each and every existence of my Ancient Egypt theme **'egy'** with yours **'xyz'**.
-5. Alter the links to the image files to link to your files.
+3. Rename the given CSS file to reflect your theme **theme-xyz-leaflet-controls.css**.
+4. Within the **theme-xyz-leaflet-controls.css** file, replace any existence of my Ancient Egypt theme **'egy'** with yours **'xyz'**.
+5. Alter the links to the image files in order to link to your files.
 6. Include your CSS file in the HTML file as shown above.
 7. Use the new CSS class names to create the **themeControls** within the \<script> section of your HTML file.
-
-
 
 ## Supported Leaflet Versions
 
 ## License
 
-This plugin is licensed under the MIT license, see the LICENSE file.
+This plugin is licensed under the GPL license, see the LICENSE file.
