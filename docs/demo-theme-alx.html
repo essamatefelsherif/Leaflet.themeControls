@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leaflet themeControls</title>
+		
+	<link rel="icon" type="image/png" href="./css/img/leaflet.png"/>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="description" content="Leaflet Theme Controls" />
+	<meta name="keywords" content="">
+	<meta name="author" content="Essam A. El-Sherif" />
+
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+	<link rel="stylesheet" type="text/css" href="./css/theme-alx-leaflet-controls.css" />
+
+	<style type="text/css">
+		html { width: 100%;	height: 100%; }
+		body{ height: 100%; margin:0; padding:0; }
+		#frame{ width: 100%; height: 100%; margin:0; padding:0; }
+		#mapid{
+			position: relative;
+			width: 100%; height: 100%;
+			top: 0; left: 0;
+			margin:0; padding:0;
+			border: none;
+			box-shadow: none;
+			transition: 1.0s;
+		}
+		
+		.alx-tooltip{
+			font-family: verdana;
+			font-weight: bold;
+			text-align: center;
+			color: rgb(0, 64, 128);
+		}
+	
+		.alx-tooltip .alx-tooltip-title{
+			color: rgb(141, 27, 61);
+		}
+
+		.alx-tooltip .arabic{
+			font-size: 120%;
+		}
+
+		.alx-tooltip .alx-tooltip-img{
+			border: 2px solid rgb(141, 27, 61);
+			border-radius: 8px;
+		}
+		
+	</style>
+	
+	<script type="text/javascript" src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+	<script type="text/javascript" src="./js/theme-leaflet-controls.js"></script>
+	<script type="text/javascript" src="./js/theme-leaflet-egypt.js"></script>
+	<script type="text/javascript">
+		window.onload = function(){
+
+			var basemap_layers = {}, basemap_default;
+			var my_credit = '<a href="https://career.essamonline.net" target="_blank" title="Essam A. El-Sherif">Essam A. El-Sherif</a>';
+
+			init_basemap();
+
+			var map_center = L.latLng(28.652031, 30.750732), map_zoom = 5;
+			var map_elt= document.getElementById('mapid');			
+			var map_1 = L.map(map_elt, {
+								center: map_center,
+								zoom: map_zoom,
+								zoomControl:false,
+								attributionControl:false
+								});
+
+			basemap_default.addTo(map_1);
+
+			var geojson_layer_eg0, geojson_layer_eg1, geojson_layer_eg2;
+			var geojson_layer_pop_0, geojson_layer_pop_1, geojson_layer_pop_2;
+
+			var msg_1 = L.themeMessageBox('', {position: 'bottomright', msgClassName:'alx-tooltip', className: 'alx-leaflet-control-messagebox', title: 'Open Message Box'});
+
+			init_egypt();
+				
+			map_1_screen();
+			
+			function init_basemap(){
+				var basemap_credits = {};
+
+				if(document.location.protocol === 'https:'){
+				
+					basemap_layers['Satellite']		= 'https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}';
+					basemap_layers['Open Street']	= 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
+					basemap_layers['Toner']			= 'https://stamen-tiles.a.ssl.fastly.net/toner-background/{z}/{x}/{y}.png';
+					basemap_layers['Watercolor']	= 'https://stamen-tiles.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.png';
+				}
+				else{
+					basemap_layers['Satellite']		= 'https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}';
+					basemap_layers['Open Street']	= 'http://tile.openstreetmap.org/{z}/{x}/{y}.png';
+					basemap_layers['Toner']			= 'http://tile.stamen.com/toner-background/{z}/{x}/{y}.png';
+					basemap_layers['Watercolor']	= 'http://tile.stamen.com/watercolor/{z}/{x}/{y}.png';
+				}
+
+				basemap_credits['Satellite']	= 'Map data ©2015 Google';
+				basemap_credits['Open Street']	= '© OpenStreetMap contributors, CC-BY-SA';
+				basemap_credits['Toner']		= 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.';
+				basemap_credits['Watercolor']	= 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.';
+
+				for(var i in basemap_layers){
+					basemap_layers[i] = L.tileLayer(basemap_layers[i], {attribution:basemap_credits[i]});
+				}
+
+				basemap_default = basemap_layers['Open Street'];
+			}
+
+			function init_egypt(){
+				var flag_path = './img/egypt_flags', flag;
+				var egy = L.themeEgypt();
+
+				var geojson_eg0 = egy.getEgypt().eg0;
+				var geojson_eg1 = egy.getEgypt().eg1;
+				var geojson_eg2 = egy.getEgypt().eg2;
+				
+				var pop = egy.getEgyptPop();
+				
+				geojson_layer_eg0 = L.geoJSON(geojson_eg0, {style: styleFeature, onEachFeature: bindFeature_0});
+				geojson_layer_eg1 = L.geoJSON(geojson_eg1, {style: styleFeature, onEachFeature: bindFeature_1});
+				geojson_layer_eg2 = L.geoJSON(geojson_eg2, {style: styleFeature_2, onEachFeature: bindFeature_2});
+
+				geojson_layer_eg0.on('click', connectToMsg);
+				geojson_layer_eg1.on('click', connectToMsg);
+				geojson_layer_eg2.on('click', connectToMsg);
+
+				function connectToMsg(){
+					if(msg_1.options.collapsed){
+						!msg_1.isExpanded() ? msg_1.expand() : msg_1.collapse();
+					}
+				}
+
+				function styleFeature(feature){
+					var st={};
+
+					st.stroke = true;
+					st.color = '#3388ff';
+					st.weight = 2;
+					st.opacity = 1.0;
+					st.lineCap = 'round';
+					st.lineJoin = 'round';
+					st.fillColor = '#3388ff'
+					st.fill = true;
+					st.fillOpacity = 0.1;
+					
+					return st;
+				}
+				
+				function styleFeature_2(feature){
+					var st=styleFeature(feature);
+
+					st.dashArray ='7';
+					return st;
+				}
+
+				function bindFeature_0(feature, layer){
+					var tooltip_content;
+					
+					if(feature.properties['ADM0_EN']){
+						tooltip_content = '<div class="alx-tooltip-title">';
+						tooltip_content += (feature.properties['ADM0_EN'] + ' / ' + '<span class="arabic">' + feature.properties['ADM0_AR']);
+						tooltip_content += '</span></div>';
+					}else
+						tooltip_content = 'NA';
+						
+					flag = flag_path + '/' + (feature.properties['ADM0_PCODE'] + '.png');
+					tooltip_content += ('<div><hr><img class="alx-tooltip-img" src="' + flag + '"></div>');
+					
+					layer.bindTooltip(tooltip_content, {sticky: false, className:'alx-tooltip'});
+					
+					setLayerEvent(layer);
+				}
+				function bindFeature_1(feature, layer){
+					var tooltip_content;
+					
+					if(feature.properties['ADM1_EN']){
+						tooltip_content = '<div class="alx-tooltip-title">';
+						tooltip_content += (feature.properties['ADM0_EN'] + ' / ' + '<span class="arabic">' + feature.properties['ADM0_AR']);
+						tooltip_content += '</span></div><div>';
+						tooltip_content += (feature.properties['ADM1_EN'] + ' / ' + '<span class="arabic">' + feature.properties['ADM1_AR']);
+						tooltip_content += '</span></div>';
+					}
+					else
+						tooltip_content = 'NA';
+					
+					flag = flag_path + '/' + (feature.properties['ADM1_PCODE'] + '.png');
+					tooltip_content += ('<div><hr><img class="alx-tooltip-img" src="' + flag + '"></div>');
+
+					layer.bindTooltip(tooltip_content, {sticky: false, className:'alx-tooltip'});
+
+					setLayerEvent(layer);
+				}
+				function bindFeature_2(feature, layer){
+					var tooltip_content;
+					
+					if(feature.properties['ADM2_EN']){
+						tooltip_content = '<div class="alx-tooltip-title">';
+						tooltip_content += (feature.properties['ADM0_EN'] + ' / ' + '<span class="arabic">' + feature.properties['ADM0_AR']);
+						tooltip_content += '</span></div><div>';
+						tooltip_content += (feature.properties['ADM1_EN'] + ' / ' + '<span class="arabic">' + feature.properties['ADM1_AR'] + '</span></div>');
+						tooltip_content += '<div>'
+						tooltip_content += (feature.properties['ADM2_EN'] + ' / ' + '<span class="arabic">' + feature.properties['ADM2_AR']);
+						tooltip_content += '</span></div>';
+					}
+					else
+						tooltip_content = 'NA';
+					
+					flag = flag_path + '/' + (feature.properties['ADM1_PCODE'] + '.png');
+					tooltip_content += ('<div><img class="alx-tooltip-img" src="' + flag + '"></div>');
+
+					layer.bindTooltip(tooltip_content, {sticky: false, className:'alx-tooltip'});
+
+					setLayerEvent(layer);
+				}
+
+				function setLayerEvent(layer){
+					var tooltip = layer.getTooltip();
+
+					layer.on('mouseover', function(){
+						this.setStyle({fillOpacity:0.3});
+						msg_1.setContent(tooltip.getContent());
+						if(msg_1.isExpanded())
+							this.closeTooltip();
+					});
+
+					layer.on('mouseout', function(){
+						this.setStyle({fillOpacity:0.1});
+						msg_1.setContent('');
+					});
+					
+					layer.on('click', function(){
+						this.toggleTooltip();
+					});
+				}
+				
+				function bindFeaturePop(feature, layer){
+					layer['pop'] = pop[feature['properties']['ADM1_PCODE']];
+					layer['popCat'] = setPopCat(layer['pop']);
+					layer['popTotal'] = pop[feature['properties']['ADM0_PCODE']];
+					
+					var tooltip_content,
+						n = new Intl.NumberFormat().format(layer['pop']),
+						p = (new Number((layer['pop']/layer['popTotal'])*100)).toFixed(2),
+						t = new Intl.NumberFormat().format(layer['popTotal']);
+					
+					if(feature.properties['ADM1_EN']){
+						tooltip_content = '<div class="alx-tooltip-title">';
+						tooltip_content += (feature.properties['ADM1_EN'] + ' / ' + '<span class="arabic">' + feature.properties['ADM1_AR']);
+						tooltip_content += '</span></div>';
+						tooltip_content += '<div style="text-align:center">Population: ' + n + ' (' + p + '%)' +'</div>';
+						tooltip_content += '<div style="text-align:center">Population Total: ' + t + '</div>';
+					}
+
+					layer.bindTooltip(tooltip_content, {sticky: true, className:'alx-tooltip'});
+
+					setPopLayerEvent(feature, layer);
+				}
+
+			}
+			
+			function map_1_screen(){
+				map_1.options.doubleClickZoom = scrollWheelZoom = true;
+
+				var map_center = L.latLng(28.652031, 30.750732), map_zoom = 5;
+				
+				/* add zoom control */
+				var control_zoom = L.themeZoomControl({position:'topleft', className:'alx-leaflet-control-zoom'});
+				control_zoom.addTo(map_1);
+
+				/* add screen control */
+				var control_screen = L.themeScreenControl({position:'topleft', singleButton: true, className: 'alx-leaflet-control-screen'});
+				control_screen.addTo(map_1);
+
+				/* add bookmark control */
+				var control_bm = L.themeBookmarkControl({position: 'topleft', center: map_center, zoom: map_zoom, title: 'Egypt', textButton: 'E', className: 'alx-leaflet-control-bookmark'});
+				control_bm.addTo(map_1);
+				
+				/* add scale control */
+				var control_scale = L.control.scale({imperial:false, maxWidth:100});
+				control_scale.addTo(map_1);
+
+				/* add baselayers control */
+				var control_layers_base = L.themeLayersControl(basemap_layers, {}, {
+					position:'topright',
+					title: 'Baselayers',
+					mutual: true,
+					className:{
+						link:'alx-leaflet-control-layer-link-11',
+						form: 'alx-leaflet-control-layer-form-12',
+						baselayer:'', overlay:'', separator:'' }
+					}
+				);
+				control_layers_base.addTo(map_1);
+
+				/* add overlayers control */
+				var overlay = {'Egypt': geojson_layer_eg0, 'Egypt Governorates': geojson_layer_eg1, 'Egypt Governorates Sections': geojson_layer_eg2};
+				
+				var control_layers_overlays = L.themeLayersControl({}, overlay, {
+						position:'topright',
+						title: 'Administration',
+						mutual: true,
+						className:{
+							link:'alx-leaflet-control-layer-link-12',
+							form:'alx-leaflet-control-layer-form-12',
+							baselayer:'', overlay:'', separator:''}
+					}
+				);
+				control_layers_overlays.addTo(map_1);
+
+				/* add attribution control */
+				var control_attr = L.themeAttributionControl({
+					position:'bottomright',
+					postfix: my_credit,
+					className:'alx-leaflet-control-attribution',
+				});
+				control_attr.addTo(map_1);
+
+				var active_layer = basemap_default;
+				var active_credit = active_layer.getAttribution();
+				var control_attr_prefix = control_attr.options.prefix;
+				var	narrow_screen = (map_1.getSize().x < 768);
+
+				if(narrow_screen){
+					if(control_attr.options.postfix) 
+						control_attr.setPrefix('');
+					control_attr.removeAttribution(active_credit);
+				}
+				
+				map_1.on('baselayerchange', function(e){
+					active_layer = e.layer;
+					active_credit = active_layer.getAttribution();
+
+					if(narrow_screen){
+						if(control_attr.options.postfix) 
+							control_attr.setPrefix('');
+						control_attr.removeAttribution(active_credit);
+					}
+				});
+				
+				map_1.on('resize', function(e){
+					narrow_screen = (e.newSize.x < 768);
+
+					if(narrow_screen){
+						if(control_attr.options.postfix) 
+							control_attr.setPrefix('');
+						control_attr.removeAttribution(active_credit);
+					}
+					else{
+						control_attr.setPrefix(control_attr_prefix);
+						control_attr.addAttribution(active_credit);
+					}
+				});
+
+				/* add message control */
+				msg_1.addTo(map_1);
+
+				/* add theme control */
+				var control_leaflet = L.control.theme({position: 'topright', leaflet: false, className: 'alx-leaflet-control'});
+				control_leaflet.addTo(map_1);
+				
+				control_leaflet.options.func = function(){
+					if(control_leaflet.options.leaflet){
+							control_zoom.options.className = '';
+							control_zoom.update();
+
+							control_screen.options.className = '';
+							control_screen.update();
+							
+							control_bm.options.className = '';
+							control_bm.update();
+							
+							control_layers_base.options.className = {link:'', form: '', baselayer:'', overlay:'', separator:'' };
+							control_layers_base.update();
+							
+							control_layers_overlays.options.className = {link:'', form:'', baselayer:'', overlay:'', separator:''};
+							control_layers_overlays.update();
+
+							msg_1.options.className = '';
+							msg_1.update();
+
+							control_attr.options.className = '';
+							control_attr.update();
+					}
+					else{
+							control_zoom.options.className = 'alx-leaflet-control-zoom';
+							control_zoom.update();
+
+							control_screen.options.className = 'alx-leaflet-control-screen';
+							control_screen.update();
+
+							control_bm.options.className = 'alx-leaflet-control-bookmark';
+							control_bm.update();
+
+							control_layers_base.options.className = {
+								link:'alx-leaflet-control-layer-link-11',
+								form: 'alx-leaflet-control-layer-form-12',
+								baselayer:'', overlay:'', separator:'' };
+							control_layers_base.update();
+							
+							control_layers_overlays.options.className = {
+								link:'alx-leaflet-control-layer-link-12',
+								form:'alx-leaflet-control-layer-form-12',
+								baselayer:'', overlay:'', separator:''};
+							control_layers_overlays.update();
+
+							msg_1.options.className = 'alx-leaflet-control-messagebox';
+							msg_1.update();
+
+							control_attr.options.className = 'alx-leaflet-control-attribution';
+							control_attr.update();
+					}
+				}
+			}
+		};
+	</script>
+</head>
+<body>
+<body class="background">
+	<div class="background" id="frame">
+		<div class="background" id="mapid">
+		</div>
+	</div>
+</body>
+</body>
+</html>
