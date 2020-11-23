@@ -10,8 +10,8 @@ Using **themeControls** within a web map will enhance the user interface with th
 
 ## Demo
 
-1. [demo_1](https://career.essamonline.net) demonstrates using **themeControls** to provide a user interface relevant to *Ancient Egypt*.
-2. [demo_2](https://career.essamonline.net) demonstrates using **themeControls** to provide a user interface relevant to the *Alexandria City of Egypt*.
+1. [demo_1](https://essamatefelsherif.github.io/Leaflet.themeControls/demo-theme-egy.html) demonstrates using **themeControls** to provide a user interface relevant to *Ancient Egypt*.
+2. [demo_2](https://essamatefelsherif.github.io/Leaflet.themeControls/demo-theme-alx.html) demonstrates using **themeControls** to provide a user interface relevant to the *Alexandria City of Egypt*.
 
 ## Control Class Hierarchy
 
