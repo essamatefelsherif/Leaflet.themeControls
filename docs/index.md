@@ -1,4 +1,4 @@
 ## My Theme Page
 
-<iframe src="demo_theme_egy.html" style="height:300px;width:450px;" title="Iframe Example"></iframe>
+<iframe src="demo-theme-egy.html" style="height:600px;width:600px;" title="Iframe Example"></iframe>
 
