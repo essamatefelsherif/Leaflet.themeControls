@@ -1,0 +1,619 @@
+/* Theme Layers Control */
+
+.egy-leaflet-control-layer-link-11, .leaflet-touch .egy-leaflet-control-layer-link-11,
+.egy-leaflet-control-layer-link-12, .leaflet-touch .egy-leaflet-control-layer-link-12,
+.egy-leaflet-control-layer-link-13, .leaflet-touch .egy-leaflet-control-layer-link-13{
+	background-position: 50% 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 44px;
+	height: 44px;
+}
+.egy-leaflet-control-layer-link-11::before,
+.egy-leaflet-control-layer-link-12::before,
+.egy-leaflet-control-layer-link-13::before{
+	display: none;
+}
+
+.egy-leaflet-control-layer-link-11::before{
+	content: url('./img/egy/egy_beetle_3.png');
+}
+.egy-leaflet-control-layer-link-12::before{
+	content: url('./img/egy/egy_sphinx_3.png');
+}
+.egy-leaflet-control-layer-link-13::before{
+	content: url('./img/egy/egy_pharaoh_3.png');
+}
+
+.egy-leaflet-control-layer-link-11, .leaflet-touch .egy-leaflet-control-layer-link-11{
+	background-image: url('./img/egy/egy_beetle_2.png');
+}
+.egy-leaflet-control-layer-link-11:hover{
+	background-image: url('./img/egy/egy_beetle_3.png');
+}
+
+.egy-leaflet-control-layer-link-12, .leaflet-touch .egy-leaflet-control-layer-link-12{
+	background-image: url('./img/egy/egy_sphinx_2.png');
+}
+.egy-leaflet-control-layer-link-12:hover{
+	background-image: url('./img/egy/egy_sphinx_3.png');
+}
+
+.egy-leaflet-control-layer-link-13, .leaflet-touch .egy-leaflet-control-layer-link-13{
+	background-image: url('./img/egy/egy_pharaoh_2.png');
+}
+.egy-leaflet-control-layer-link-13:hover{
+	background-image: url('./img/egy/egy_pharaoh_3.png');
+}
+
+.egy-leaflet-control-layer-form-11,
+.egy-leaflet-control-layer-form-12,
+.egy-leaflet-control-layer-form-13{
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	color: #400000;
+	font-family: Verdana, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	text-shadow: 0px 2px 3px #fff;
+	padding: 15px;
+	border: 1px solid #400000;
+	border-radius: 5px;
+	box-shadow: 5px 5px 15px darkgray;
+
+	transition: 0;
+}
+
+.egy-leaflet-control-layer-form-11::before,
+.egy-leaflet-control-layer-form-12::before,
+.egy-leaflet-control-layer-form-13::before{
+	display: none;
+} 
+
+.egy-leaflet-control-layer-form-11::before{ content: url('./img/egy/egy_texture_marbl-1.png'); }
+.egy-leaflet-control-layer-form-12::before{ content: url('./img/egy/egy_texture_paper-1.jpg'); }
+.egy-leaflet-control-layer-form-13::before{ content: url('./img/egy/egy_texture_paper-2.jpg'); }
+
+.egy-leaflet-control-layer-form-11{ background-image: url('./img/egy/egy_texture_marbl-1.png'); }
+.egy-leaflet-control-layer-form-12{ background-image: url('./img/egy/egy_texture_paper-1.jpg'); }
+.egy-leaflet-control-layer-form-13{ background-image: url('./img/egy/egy_texture_paper-2.jpg'); }
+
+.egy-leaflet-control-layer-base{ }
+.egy-leaflet-control-layer-overlay{ }
+.egy-leaflet-control-layer-sep{
+	border-top: 2px solid #f1f1f1;
+	box-shadow: 2px 3px 4px black;
+}
+
+/* Theme Zoom Control */
+
+.egy-leaflet-control-zoom, .leaflet-touch .egy-leaflet-control-zoom{
+	background-color: transparent;
+	border: none;
+}
+
+.egy-leaflet-control-zoom a, .leaflet-touch .egy-leaflet-control-zoom a{
+	font-family: "Lucida Console, Monaco, monospace";
+	font-weight: bold;
+	font-size: 20px;
+	color: black;
+	text-align: center;
+	text-indent: 0;
+	text-decoration: none;
+	width: 44px;
+	height:44px;
+	background-color: transparent;
+	background-size: 44px 44px;
+	display: block;
+}
+
+.egy-leaflet-control-zoom a:first-child::before{
+	display: none;
+	content : url('./img/egy/egy_ring-1_2.png');
+}
+.egy-leaflet-control-zoom a:last-child::before{
+	display: none;
+	content : url('./img/egy/egy_ring-1r_2.png');
+}
+
+.egy-leaflet-control-zoom a:first-child{
+	background-image : url('./img/egy/egy_ring-1_1.png');
+	line-height: 37px;
+}
+.egy-leaflet-control-zoom a:first-child:hover{
+	background-image : url('./img/egy/egy_ring-1_2.png');
+	color: rgba(255, 153, 38, 1);
+}
+.egy-leaflet-control-zoom a:first-child.leaflet-disabled, .egy-leaflet-control-zoom a:first-child:hover.leaflet-disabled{
+	color: rgba(187, 187, 187, 1);
+}
+
+.egy-leaflet-control-zoom a:last-child:hover{
+	background-image : url('./img/egy/egy_ring-1r_2.png');
+	color: rgba(255, 153, 38, 1);
+}
+.egy-leaflet-control-zoom a:last-child{
+	background-image : url('./img/egy/egy_ring-1r_1.png');
+	line-height: 44px;
+}
+.egy-leaflet-control-zoom a:last-child.leaflet-disabled,  .egy-leaflet-control-zoom a:last-child:hover.leaflet-disabled{
+	color: rgba(187, 187, 187, 1);
+}
+
+/* Theme Attribution Control */
+
+.leaflet-container .egy-leaflet-control-attribution{
+	background: rgba(243, 210, 145, 1);
+	margin: 0;
+}
+
+.egy-leaflet-control-attribution{
+	padding: 0 5px;
+	color: #333;
+}
+
+.egy-leaflet-control-attribution a {
+	text-decoration: none;
+}
+
+.egy-leaflet-control-attribution a:hover {
+	text-decoration: underline;
+}
+
+.leaflet-container .egy-leaflet-control-attribution{
+	font-size: 11px;
+}
+
+.leaflet-touch .egy-leaflet-control-attribution{
+	box-shadow: none;
+}
+
+/* Screen Control */
+
+.leaflet-control-screen-full, .leaflet-control-screen-win{
+	font: bold 18px 'Lucida Console', Monaco, monospace;
+	text-indent: 1px;
+}
+
+.leaflet-touch .leaflet-control-screen-full, .leaflet-touch .leaflet-control-screen-win{
+	font-size: 22px;
+}
+
+/* Theme Screen Control */
+
+.egy-leaflet-control-screen-button, .leaflet-touch .egy-leaflet-control-screen-button{
+	display: block;
+	width: 44px; height: 44px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url(./img/egy/egy_ankh-2_bw.png);	
+}
+
+.egy-leaflet-control-screen-button::before{
+	display: none;
+	content : url('./img/egy/egy_ankh-2_cl.png');
+}
+
+.egy-leaflet-control-screen-button::after{
+	display: none;
+	content : url('./img/egy/egy_ankh-1_cl.png');
+}
+
+.leaflet-disabled.egy-leaflet-control-screen-button, .leaflet-touch .leaflet-disabled.egy-leaflet-control-screen-button{
+	  opacity: 0.5;
+}
+
+.leaflet-disabled.egy-leaflet-control-screen-button:hover, .leaflet-touch .leaflet-disabled.egy-leaflet-control-screen-button:hover{
+	background-image: url(./img/egy/egy_ankh-2_bw.png);
+}
+
+.egy-leaflet-control-screen-button:hover, .leaflet-touch .egy-leaflet-control-screen-button:hover {
+	background-image: url(./img/egy/egy_ankh-2_cl.png);	
+}
+
+.leaflet-fullscreen-on .egy-leaflet-control-screen-button, .leaflet-touch.leaflet-fullscreen-on .egy-leaflet-control-screen-button{
+	background-image: url(./img/egy/egy_ankh-1_bw.png);	
+}
+
+.leaflet-fullscreen-on .egy-leaflet-control-screen-button:hover, .leaflet-touch.leaflet-fullscreen-on .egy-leaflet-control-screen-button:hover{
+	background-image: url(./img/egy/egy_ankh-1_cl.png);	
+}
+
+.leaflet-fullscreen-on .leaflet-disabled.egy-leaflet-control-screen-button, .leaflet-touch.leaflet-fullscreen-on .leaflet-disabled.egy-leaflet-control-screen-button{
+	opacity: 0.5;
+}
+
+.leaflet-fullscreen-on .leaflet-disabled.egy-leaflet-control-screen-button:hover, .leaflet-touch.leaflet-fullscreen-on .leaflet-disabled.egy-leaflet-control-screen-button:hover{
+	background-image: url(./img/egy/egy_ankh-1_bw.png);	
+}
+
+.leaflet-container:-webkit-full-screen {
+	position:fixed!important;
+	width:100%!important;
+	height:100%!important;
+	top:0!important;
+	left:0!important;
+	z-index:99999;
+}
+
+.leaflet-container.leaflet-fullscreen-on {
+	position:fixed!important;
+	width:100%!important;
+	height:100%!important;
+	top:0!important;
+	left:0!important;
+	z-index:99999;
+}
+
+.leaflet-pseudo-fullscreen {
+	position:fixed!important;
+	width:100%!important;
+	height:100%!important;
+	top:0!important;
+	left:0!important;
+	z-index:99999;
+}
+
+/* Message Box Control */
+
+.leaflet-control-messagebox{
+	background-color: #fff;
+	border: 2px solid rgba(0,0,0,0.2);
+	border-radius: 5px;
+	background-clip: padding-box;
+
+	width: 44px;
+	height: 44px;
+
+	cursor: pointer;
+
+	opacity: 1.0;
+	transition: 0.3s;
+}
+
+.leaflet-control-messagebox:hover{
+	background-color: #f4f4f4;
+}
+
+.leaflet-control-messagebox-link{
+	display: block;
+	width: 100%; height: 100%;
+
+	font-family: "Lucida Console, Monaco, monospace";
+	font-size: 26px;
+	font-weight: bold;
+	color: lightgray;
+	text-decoration: none;
+	text-shadow: 1px 1px 2px gray;
+	text-align: center;
+	vertical-align: center;
+	line-height: 44px;
+}
+
+.leaflet-control-messagebox-expanded{
+	width: 300px;
+	height: 225px;
+
+	padding: 6px 10px 6px 6px;
+	padding: 6px 10px;
+	color: #333;
+
+	opacity: 0.8;
+	transition: 0.3s;
+}
+
+.leaflet-control-messagebox-expanded.leaflet-control-messagebox-content{
+	width: auto;
+	height: auto;
+}
+
+.leaflet-control-messagebox-expanded:hover{
+	background-color: #f4f4f4;
+}
+
+.leaflet-control-messagebox-msg{
+	white-space: nowrap;
+}
+
+/* Theme Message Box Control */
+
+.egy-leaflet-control-messagebox{
+	padding: 0; 
+	background-color: transparent;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url('./img/egy/egy_scroll-1_1.png');
+	background-size: 100% 75%;
+	border: none;
+
+	width: 44px;
+	height: 44px;
+
+	cursor: pointer;
+
+	opacity: 1.0;
+	transition: 0.3s;
+}
+
+.egy-leaflet-control-messagebox::before{
+	display: none;
+	content: url('./img/egy/egy_scroll-1_2.png');
+}
+
+.egy-leaflet-control-messagebox:hover{
+	background-image: url('./img/egy/egy_scroll-1_2.png');
+}
+
+.egy-leaflet-control-messagebox-expanded{
+	width: 300px;
+	height: 225px;
+	background-size: 100% 100%;
+	background-image: url('./img/egy/egy_scroll-1_1.png');
+
+	opacity: 0.8;
+	transition: 0.3s;
+}
+
+.egy-leaflet-control-messagebox-expanded.egy-leaflet-control-messagebox-content{
+}
+
+.egy-leaflet-control-messagebox-expanded:hover{
+	background-image: url('./img/egy/egy_scroll-1_2.png');
+}
+
+.egy-leaflet-control-messagebox-link{
+	display: block;
+	width: 100%; height: 100%;
+
+	font-family: "Lucida Console, Monaco, monospace";
+	font-size: 0;
+	font-weight: bold;
+	color: lightgray;
+	text-decoration: none;
+	text-shadow: 1px 1px 2px gray;
+	text-align: center;
+	vertical-align: center;
+	line-height: 44px;
+}
+
+.egy-leaflet-control-messagebox-msg{
+	width: 75%; margin: auto;
+	padding-top: 27px;
+	height: 171px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+/* Bookmark Control */
+
+.leaflet-bookmark-control{
+	font: bold 18px 'Lucida Console', Monaco, monospace;
+	text-indent: 1px;
+}
+
+.leaflet-touch .leaflet-bookmark-control{
+	font-size: 22px;
+}
+
+/* Theme Bookmark Control */
+
+.egy-leaflet-control-bookmark{
+	background-color: transparent;
+	border: none;
+}
+
+.egy-leaflet-control-bookmark-link{
+	display: block;
+
+	background-image: url('./img/egy/egy_eye_2.png');
+	background-position: 50% 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 44px;
+	height: 44px;
+}
+
+.leaflet-disabled.egy-leaflet-control-bookmark-link{
+	opacity: 0.5;
+}
+
+.egy-leaflet-control-bookmark-link::before{
+	content: url('./img/egy/egy_eye_3.png');
+	display: none;
+}
+
+.egy-leaflet-control-bookmark-link:hover{
+	background-image: url('./img/egy/egy_eye_3.png');
+}
+
+.leaflet-disabled.egy-leaflet-control-bookmark-link:hover{
+	opacity: 0.5;
+}
+
+/* Leaflet Control */
+
+.std-leaflet-control{
+	box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+	background: #fff;
+	border-radius: 5px;
+}
+
+.leaflet-bar .std-leaflet-control-link, .std-leaflet-control-link{
+	background-image: url('./img/leaflet.png');
+	width: 36px;
+	height: 36px;
+}
+
+.leaflet-retina .leaflet-bar .std-leaflet-control-link{
+	background-image: url('./img/leaflet.png');
+	background-size: 26px 26px;
+}
+
+.leaflet-touch .leaflet-bar .std-leaflet-control-link, .leaflet-touch .leaflet-bar .std-leaflet-control-link{
+	width: 44px;
+	height: 44px;
+}
+
+.egy-leaflet-control-link{
+	display: block;
+	width: 44px; height: 44px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url('./img/egy/egy_flower-2.png');
+}
+
+.leaflet-retina .egy-leaflet-control-link{
+	background-image: url('./img/egy/egy_flower-2.png');
+	background-size: 26px 26px;
+}
+
+.leaflet-touch .egy-leaflet-control-link{
+	width: 44px;
+	height: 44px;
+}
+
+.egy-leaflet-control-link::before{
+	display: none;
+	content : url('./img/egy/egy_flower-3.png');
+}
+.egy-leaflet-control-link:hover{
+	background-image: url('./img/egy/egy_flower-3.png');
+}
+.leaflet-touch .egy-leaflet-control-link:hover{
+	background-image: url('./img/egy/egy_flower-3.png');
+}
+
+/* Extra small devices (phones, 600px and down) */
+	@media only screen and (max-width: 600px) { 
+		.egy-leaflet-control-layer-form-11, .egy-leaflet-control-layer-form-12, .egy-leaflet-control-layer-form-13{
+			font-size: 12px;
+		}
+		.egy-leaflet-control-layer-link-11,
+		.egy-leaflet-control-layer-link-12,
+		.egy-leaflet-control-layer-link-13,
+		.leaflet-touch .egy-leaflet-control-layer-link-11,
+		.leaflet-touch .egy-leaflet-control-layer-link-12,
+		.leaflet-touch .egy-leaflet-control-layer-link-13{
+			width: 30px;
+			height: 30px;
+		}
+		.egy-leaflet-control-zoom a, .leaflet-touch .egy-leaflet-control-zoom a{
+			width: 30px;
+			height: 30px;
+			background-size: 30px 30px;
+			font-size: 14px;
+		}
+		.egy-leaflet-control-zoom a:first-child, .leaflet-touch .egy-leaflet-control-zoom a:first-child{
+			line-height: 25px;
+		}
+		.egy-leaflet-control-zoom a:last-child, .leaflet-touch .egy-leaflet-control-zoom a:last-child{
+			line-height: 30px;
+		}
+		.egy-leaflet-control-screen-button, .leaflet-touch .egy-leaflet-control-screen-button{
+			width: 30px;
+			height: 30px;
+		}
+		.egy-leaflet-control-bookmark-link{
+			width: 30px;
+			height: 30px;
+		}
+		.egy-leaflet-control-link, .leaflet-touch .egy-leaflet-control-link{
+			width: 30px;
+			height: 30px;
+		}
+	} 
+/* Small devices (portrait tablets and large phones, 600px and up) */
+	@media only screen and (min-width: 600px) {  
+		.egy-leaflet-control-layer-form-11, .egy-leaflet-control-layer-form-12, .egy-leaflet-control-layer-form-13{
+			font-size: 13px;
+		}
+		.egy-leaflet-control-layer-link-11,
+		.egy-leaflet-control-layer-link-12,
+		.egy-leaflet-control-layer-link-13,
+		.leaflet-touch .egy-leaflet-control-layer-link-11,
+		.leaflet-touch .egy-leaflet-control-layer-link-12,
+		.leaflet-touch .egy-leaflet-control-layer-link-13{
+			width: 30px;
+			height: 30px;
+		}
+		.egy-leaflet-control-zoom a, .leaflet-touch .egy-leaflet-control-zoom a{
+			width: 30px;
+			height: 30px;
+			background-size: 30px 30px;
+			font-size: 14px;
+		}
+		.egy-leaflet-control-zoom a:first-child, .leaflet-touch .egy-leaflet-control-zoom a:first-child{
+			line-height: 25px;
+		}
+		.egy-leaflet-control-zoom a:last-child, .leaflet-touch .egy-leaflet-control-zoom a:last-child{
+			line-height: 30px;
+		}
+		.egy-leaflet-control-screen-button, .leaflet-touch .egy-leaflet-control-screen-button{
+			width: 30px;
+			height: 30px;
+		}
+		.egy-leaflet-control-bookmark-link{
+			width: 30px;
+			height: 30px;
+		}
+		.egy-leaflet-control-link, .leaflet-touch .egy-leaflet-control-link{
+			width: 30px;
+			height: 30px;
+		}
+	} 
+/* Medium devices (landscape tablets, 768px and up) */
+	@media only screen and (min-width: 768px) {  
+		.egy-leaflet-control-layer-form-11, .egy-leaflet-control-layer-form-12, .egy-leaflet-control-layer-form-13{
+			font-size: 14px;
+		}
+		.egy-leaflet-control-layer-link-11,
+		.egy-leaflet-control-layer-link-12,
+		.egy-leaflet-control-layer-link-13,
+		.leaflet-touch .egy-leaflet-control-layer-link-11,
+		.leaflet-touch .egy-leaflet-control-layer-link-12,
+		.leaflet-touch .egy-leaflet-control-layer-link-13{
+			width: 44px;
+			height: 44px;
+		}
+		.egy-leaflet-control-zoom a, .leaflet-touch .egy-leaflet-control-zoom a{
+			width: 44px;
+			height: 44px;
+			background-size: 44px 44px;
+			font-size: 20px;
+		}
+		.egy-leaflet-control-zoom a:first-child, .leaflet-touch .egy-leaflet-control-zoom a:first-child{
+			line-height: 37px;
+		}
+		.egy-leaflet-control-zoom a:last-child, .leaflet-touch .egy-leaflet-control-zoom a:last-child{
+			line-height: 44px;
+		}
+		.egy-leaflet-control-screen-button, .leaflet-touch .egy-leaflet-control-screen-button{
+			width: 44px;
+			height: 44px;
+		}
+		.egy-leaflet-control-bookmark-link{
+			width: 44px;
+			height: 44px;
+		}
+		.egy-leaflet-control-link, .leaflet-touch .egy-leaflet-control-link{
+			width: 44px;
+			height: 44px;
+		}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+	@media only screen and (min-width: 992px) {  
+		.egy-leaflet-control-layer-form-11, .egy-leaflet-control-layer-form-12, .egy-leaflet-control-layer-form-13{
+			font-size: 15px;
+		}
+	} 
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+	@media only screen and (min-width: 1200px) { 
+		.egy-leaflet-control-layer-form-11, .egy-leaflet-control-layer-form-12, .egy-leaflet-control-layer-form-13{
+			font-size: 16px;
+		}
+	}
