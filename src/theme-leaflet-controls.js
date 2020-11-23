@@ -136,7 +136,7 @@ var ThemeLayersControl = L.Control.Layers.extend({
 	expand: function(){
 		var container = this._container,
 			link = this._layersLink,
-			form = this._form,
+			form = (this._form) ? this._form : this._section,
 			baselayer = this._baseLayersList,
 			overlay = this._overlaysList,
 			separator = this._separator;
@@ -173,7 +173,7 @@ var ThemeLayersControl = L.Control.Layers.extend({
 	collapse: function(){
 		var container = this._container,
 			link = this._layersLink,
-			form = this._form,
+			form = (this._form) ? this._form : this._section,
 			baselayer = this._baseLayersList,
 			overlay = this._overlaysList,
 			separator = this._separator;
@@ -206,6 +206,7 @@ var ThemeLayersControl = L.Control.Layers.extend({
 	},
 	update: function(){
 		var className = 'leaflet-control-layers';
+		var form = (this._form) ? this._form : this._section;
 
 		L.DomUtil.remove(this._layersLink);
 
@@ -213,9 +214,9 @@ var ThemeLayersControl = L.Control.Layers.extend({
 		this._layersLink.href = '#';
 		this._layersLink.title = this.options.title || 'Layers';
 
-		var formClass = L.DomUtil.getClass(this._form).split(' ');
+		var formClass = L.DomUtil.getClass(form).split(' ');
 		for(var i = 0; i < formClass.length; i++)
-			(formClass[i] === 'leaflet-control-layers-list') || L.DomUtil.removeClass(this._form, formClass[i]);
+			(formClass[i] === 'leaflet-control-layers-list') || L.DomUtil.removeClass(form, formClass[i]);
 
 		if (L.Browser.touch){
 			L.DomEvent.on(this._layersLink, 'click', L.DomEvent.stop);
