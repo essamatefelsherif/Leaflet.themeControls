@@ -34,7 +34,7 @@ Using **themeControls** within a web map will enhance the user interface with th
 
 ## Usage
 
-In order to use this plugin, include the essential [JS](src/theme-leaflet-controls.js) and [CSS](src/css/theme-egy-leaflet-controls.css) files in your HTML page as follows:
+In order to use this plugin, include the essential [JS](src/js/theme-leaflet-controls.js) and [CSS](src/css/theme-egy-leaflet-controls.css) files in your HTML page as follows:
 
 ```
 <html>
