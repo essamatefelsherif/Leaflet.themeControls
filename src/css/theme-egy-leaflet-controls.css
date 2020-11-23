@@ -124,22 +124,22 @@
 }
 .egy-leaflet-control-zoom a:first-child:hover{
 	background-image : url('./img/egy/egy_ring-1_2.png');
-	color: rgb(255, 153, 38);
+	color: rgba(255, 153, 38, 1);
 }
 .egy-leaflet-control-zoom a:first-child.leaflet-disabled, .egy-leaflet-control-zoom a:first-child:hover.leaflet-disabled{
-	color: rgb(187, 187, 187);
+	color: rgba(187, 187, 187, 1);
 }
 
 .egy-leaflet-control-zoom a:last-child:hover{
 	background-image : url('./img/egy/egy_ring-1r_2.png');
-	color: rgb(255, 153, 38);
+	color: rgba(255, 153, 38, 1);
 }
 .egy-leaflet-control-zoom a:last-child{
 	background-image : url('./img/egy/egy_ring-1r_1.png');
 	line-height: 44px;
 }
 .egy-leaflet-control-zoom a:last-child.leaflet-disabled,  .egy-leaflet-control-zoom a:last-child:hover.leaflet-disabled{
-	color: rgb(187, 187, 187);
+	color: rgba(187, 187, 187, 1);
 }
 
 /* Theme Attribution Control */
