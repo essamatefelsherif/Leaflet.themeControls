@@ -52,12 +52,14 @@ Each theme will be associated with a separate CSS file and linked image files. I
 1. Prepare the set of image (png) files that will be linked to each of the **themeControls**.
 2. Assign a name to your theme, preferably 3 or 4 letters, example **'xyz'**.
 3. Rename the given CSS file to reflect your theme **theme-xyz-leaflet-controls.css**.
-4. Within the **theme-xyz-leaflet-controls.css** file, replace any existence of my Ancient Egypt theme **'egy'** with yours **'xyz'**.
+4. Within **theme-xyz-leaflet-controls.css** file, replace any existence of my Ancient Egypt theme **'egy'** with yours **'xyz'**.
 5. Alter the links to the image files in order to link to your files.
 6. Include your CSS file in the HTML file as shown above.
 7. Use the new CSS class names to create the **themeControls** within the \<script> section of your HTML file.
 
 ## Supported Leaflet Versions
+
+This plugin was tested against Leaflet versions greater than 1.0, up to the latest 1.7.1.
 
 ## License
 
