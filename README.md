@@ -2,13 +2,15 @@
 
 A set of **themeControls** that extend Leaflet native controls, and other additional controls, in order to customize the on-screen shape of the control as defined by the underlying css and image files provided.
 
-Using **themeControls** within a web map will enhance the user interface with theme or cultural related icons.
+Using **themeControls** within a web map will enhance the user interface with a theme of cultural related icons.
 
-<div><a href="img/demo_egy.png" title="Ancient Egypt Theme"><img src="img/demo_egy.png"></a></div>
+<div><a href="https://essamatefelsherif.github.io/Leaflet.themeControls/demo-theme-egy.html" title="Ancient Egypt Theme"><img src="img/demo_egy.png"></a></div>
 
-<div><a href="img/demo_alx.png" title="Alexandria City Theme"><img src="img/demo_alx.png"></a></div>
+<div><a href="https://essamatefelsherif.github.io/Leaflet.themeControls/demo-theme-alx.html" title="Alexandria City Theme"><img src="img/demo_alx.png"></a></div>
 
 ## Demo
+
+[Demo main page](https://essamatefelsherif.github.io/Leaflet.themeControls/):
 
 1. [demo_1](https://essamatefelsherif.github.io/Leaflet.themeControls/demo-theme-egy.html) demonstrates using **themeControls** to provide a user interface relevant to *Ancient Egypt*.
 2. [demo_2](https://essamatefelsherif.github.io/Leaflet.themeControls/demo-theme-alx.html) demonstrates using **themeControls** to provide a user interface relevant to the *Alexandria City of Egypt*.
