@@ -2,7 +2,7 @@
 
 A set of [themeControls](https://essamatefelsherif.github.io/Leaflet.themeControls/ "Demo Page") that extend Leaflet native controls, and other additional controls, in order to customize the on-screen shape of the control as defined by the underlying css and image files provided.
 
-Using **themeControls** within a web map will enhance the user interface with a theme of cultural related icons.
+Using [themeControls](https://essamatefelsherif.github.io/Leaflet.themeControls/ "Demo Page") within a web map will enhance the user interface with a theme of cultural related icons.
 
 <div><a href="https://essamatefelsherif.github.io/Leaflet.themeControls/demo-theme-egy.html" title="Ancient Egypt Theme"><img src="img/demo_egy.png"></a></div>
 
@@ -12,8 +12,8 @@ Using **themeControls** within a web map will enhance the user interface with a 
 
 [Demo main page](https://essamatefelsherif.github.io/Leaflet.themeControls/):
 
-1. [demo_1](https://essamatefelsherif.github.io/Leaflet.themeControls/demo-theme-egy.html) demonstrates using **themeControls** to provide a user interface relevant to *Ancient Egypt*.
-2. [demo_2](https://essamatefelsherif.github.io/Leaflet.themeControls/demo-theme-alx.html) demonstrates using **themeControls** to provide a user interface relevant to the *Alexandria City of Egypt*.
+1. [demo_1](https://essamatefelsherif.github.io/Leaflet.themeControls/demo-theme-egy.html) demonstrates using [themeControls](https://essamatefelsherif.github.io/Leaflet.themeControls/ "Demo Page") to provide a user interface relevant to *Ancient Egypt*.
+2. [demo_2](https://essamatefelsherif.github.io/Leaflet.themeControls/demo-theme-alx.html) demonstrates using [themeControls](https://essamatefelsherif.github.io/Leaflet.themeControls/ "Demo Page") to provide a user interface relevant to the *Alexandria City of Egypt*.
 
 ## Control Class Hierarchy
 
@@ -51,13 +51,13 @@ In order to use this plugin, include the essential [JS](src/js/theme-leaflet-con
 
 Each theme will be associated with a separate CSS file and linked image files. In order to build up your theme:
 
-1. Prepare the set of image (png) files that will be linked to each of the **themeControls**.
+1. Prepare the set of image (png) files that will be linked to each of the [themeControls](https://essamatefelsherif.github.io/Leaflet.themeControls/ "Demo Page").
 2. Assign a name to your theme, preferably 3 or 4 letters, example **'xyz'**.
 3. Rename the given CSS file to reflect your theme **theme-xyz-leaflet-controls.css**.
 4. Within **theme-xyz-leaflet-controls.css** file, replace any existence of my Ancient Egypt theme **'egy'** with yours **'xyz'**.
 5. Alter the links to the image files in order to link to your files.
 6. Include your CSS file in the HTML file as shown above.
-7. Use the new CSS class names to create the **themeControls** within the \<script> section of your HTML file.
+7. Use the new CSS class names to create the [themeControls](https://essamatefelsherif.github.io/Leaflet.themeControls/ "Demo Page") within the \<script> section of your HTML file.
 
 ## Supported Leaflet Versions
 
