@@ -1,6 +1,6 @@
 # Leaflet.themeControls
 
-A set of (themeControls)[https://essamatefelsherif.github.io/Leaflet.themeControls/] that extend Leaflet native controls, and other additional controls, in order to customize the on-screen shape of the control as defined by the underlying css and image files provided.
+A set of [themeControls](https://essamatefelsherif.github.io/Leaflet.themeControls/ "Demo Page") that extend Leaflet native controls, and other additional controls, in order to customize the on-screen shape of the control as defined by the underlying css and image files provided.
 
 Using **themeControls** within a web map will enhance the user interface with a theme of cultural related icons.
 
