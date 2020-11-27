@@ -2,28 +2,198 @@
 <html>
 <head>
 	<title>Leaflet themeControls</title>
-		
 	<link rel="icon" type="image/ico" href="./img/essam.ico"/>
 
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<meta name="description" content="Leaflet Theme Controls" />
-	<meta name="keywords" content="">
+	<meta name="description" content="A set of themeControls that extend Leaflet native controls, and other additional controls, in order to customize the on-screen shape of the control as defined by the underlying css and image files provided." />
+	<meta name="keywords" content="Leaflet, LeafletJS, Control, Theme, plugin">
 	<meta name="author" content="Essam A. El-Sherif" />
 
+	<link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css">	
+	<link rel="stylesheet" type="text/css" href="./css/esm-ribbon.css">
 	<style type="text/css">
-		html {
-			width: 100%;
-			height: 100%;
-		}
+		html { width: 100%; height: 100%; }
 		body{
-			height: 100%;
-			margin:0;
-			padding:0;
-			background-color: lightblue;
+			height: 100%; margin:0; padding:0;
+
+			font-family: "Open Sans", Verdana, sans-serif;
+			color: rgb(250, 250, 250);
+
+			background-image: url("./img/travel-guide_02");
+			background-repeat: no-repeat;
+			background-position: center top;
+			background-size: cover;
+			background-attachment: fixed;
 		}
+
+		h2{
+			text-shadow: 0px 1px 3px black;
+			text-align: center;
+			font-family: "Open Sans", Verdana, sans-serif;
+		}
+
+		h2 a:link{
+			text-decoration: none;
+			color: rgb(250, 250, 250);
+		}
+		h2 a:visited{ color: rgb(250, 250, 250); }
+		h2 a:focus  { color: rgb(250, 250, 250); }
+		h2 a:hover  { color: lightgray; }
+		h2 a:active { color: lightgray; }
+
+		.widget-container{
+			margin: auto;
+		}
+
+		.widget-text, .widget-footer{
+			background-color: rgba(0, 0, 0, 0.72);
+			border-radius: 25px;
+			margin: 0 0 0 0;
+			padding: 25px;
+			text-align: justify;
+		}
+
+		.widget-theme{
+			background-color: rgba(110, 110, 110, 0.72);
+			border-radius: 12px;
+			margin: 20px 0 10px 0;
+			padding: 10px 20px;
+			text-shadow: 0 1px 3px #000;
+		}
+
+		.widget-script{
+			margin: auto;
+			padding: 3px;
+			background-color: rgb(90, 90, 90);
+			font-size: 0px;
+		}
+
+		.widget-footer{
+			margin: 20px 0 0 0;
+			border-radius: 10px;
+			padding: 5px;
+			text-align: center;
+		}
+
+		.widget-script iframe{
+			width:100%;
+			border: none;
+		}
+
+		.widget-theme table{
+			width: 100%;
+		}
+
+		.widget-theme a:link{
+			text-decoration: none;
+			color: rgb(250, 250, 250);
+		}
+		.widget-theme a:visited{ color: rgb(250, 250, 250); }
+		.widget-theme a:focus  { color: rgb(250, 250, 250); }
+		.widget-theme a:hover  { color: lightgray; }
+		.widget-theme a:active { color: lightgray; }
+
+		.widget-footer a:link{
+			text-decoration: underline;
+			text-decoration-style: dotted;
+			color: rgb(250, 250, 250);
+		}
+		.widget-footer a:visited{ color: rgb(250, 250, 250); }
+		.widget-footer a:focus  { color: rgb(250, 250, 250); }
+		.widget-footer a:hover  { color: lightgray; }
+		.widget-footer a:active { color: lightgray; }
+
+/* Extra small devices (phones, 600px and down) */
+	@media only screen and (max-width: 600px) { 
+
+		.widget-container    { width: 300px; }
+		.widget-script       { width: 290px; }
+		.widget-script iframe{ height: 116px;}
+
+		h2                          { font-size: 18px; }
+		.widget-theme               { font-size: 12px; }
+		.widget-text, .widget-footer{ font-size: 10px; }
+	}
+
+	@media only screen and (max-width: 600px) and (orientation: portrait){ 
+		.widget-script iframe{ height: 290px;}
+	}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+	@media only screen and (min-width: 600px) {  
+
+		.widget-container    { width: 440px;  }
+		.widget-script       { width: 430px;  }
+		.widget-script iframe{ height: 172px; }
+
+		h2                          { font-size: 20px; }
+		.widget-theme               { font-size: 14px; }
+		.widget-text, .widget-footer{ font-size: 12px; }
+	} 
+/* Medium devices (landscape tablets, 768px and up) */
+	@media only screen and (min-width: 768px) {  
+
+		.widget-container    { width: 562px;  }
+		.widget-script       { width: 550px;  }
+		.widget-script iframe{ height: 220px; }
+
+		h2                          { font-size: 22px; }
+		.widget-theme               { font-size: 16px; }
+		.widget-text, .widget-footer{ font-size: 14px; }
+	}
+/* Large devices (laptops/desktops, 992px and up) */
+	@media only screen and (min-width: 992px) {  
+
+		.widget-container    { width: 726px; }
+		.widget-script       { width: 710px; }
+		.widget-script iframe{ height: 284px; }
+
+		h2                          { font-size: 24px; }
+		.widget-theme               { font-size: 18px; }
+		.widget-text, .widget-footer{ font-size: 14px; }
+	}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+	@media only screen and (min-width: 1200px) { 
+
+		.widget-container     { width: 1000px; }
+		.widget-script        { width: 984px;  }
+		.widget-script iframe { height: 393px; }
+
+		h2                          { font-size: 28px; }
+		.widget-theme               { font-size: 18px; }
+		.widget-text, .widget-footer{ font-size: 14px; }
+	}
 	</style>
 </head>
 <body>
+	<a class="esm-ribbon left-top fixed" href="https://career.essamonline.net" target="_blank" data-ribbon="Essam A. El-Sherif" title="Essam A. El-Sherif"></a>
+	<div class="widget-container">
+		<h2><a href="https://github.com/essamatefelsherif/Leaflet.themeControls" target="_blank" title="Open in new window">Leaflet themeControls</a></h2>
+		<p></p>
+		<div class="widget-text">
+			A set of themeControls that extend Leaflet native controls, and other additional controls, in order to customize the on-screen shape of the control as defined by the underlying css and image files provided. Using themeControls within a web map will enhance the user interface with a theme of cultural related icons.
+		</div>
+		<div class="widget-theme">
+			<table><tr>
+				<td style="text-align: left"><a href="https://essamatefelsherif.github.io/Leaflet.themeControls/demo-theme-egy.html" target="theme-egy" title="Refresh the frame below">Ancient Egypt Theme »</a></td>
+				<td style="text-align: right"><a href="https://essamatefelsherif.github.io/Leaflet.themeControls/demo-theme-egy.html" target="_blank" title="Open in new window"> ··· </a></td>
+			</tr></table>
+		</div>
+		<div class="widget-script">
+			<iframe src="https://essamatefelsherif.github.io/Leaflet.themeControls/demo-theme-egy.html" name="theme-egy"></iframe>
+		</div>
+		<div class="widget-theme">
+			<table><tr>
+				<td style="text-align: left"><a href="https://essamatefelsherif.github.io/Leaflet.themeControls/demo-theme-alx.html" target="theme-alx" title="Refresh the frame below">Alexandria City Theme »</a></td>
+				<td style="text-align: right"><a href="https://essamatefelsherif.github.io/Leaflet.themeControls/demo-theme-alx.html" target="_blank" title="Open in new window"> ··· </a></td>
+			</tr></table>
+		</div>
+		<div class="widget-script">
+			<iframe src="https://essamatefelsherif.github.io/Leaflet.themeControls/demo-theme-alx.html" name="theme-alx"></iframe>
+		</div>
+		<div class="widget-footer">
+			<a href="https://github.com/essamatefelsherif" target="_blank" title="Github Profile">Essam A. El-Sherif</a>
+		</div>
+	</div>
 </body>
 </html>
