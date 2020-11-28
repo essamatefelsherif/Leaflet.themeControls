@@ -651,9 +651,11 @@ var BookmarkControl = L.Control.extend({
 		L.DomEvent.off(this._container, 'click', this._onClick, this);
 		map.off('zoomend moveend', this._update, this);
 	},
-	_onClick : function(){
+	_onClick : function(e){
 		var map = this._map, zoom = this.options.zoom, center = this.options.center, className = 'leaflet-disabled';
 
+		L.DomEvent.preventDefault(e);
+		
 		if(!L.DomUtil.hasClass(this._bookmarkLink, className))
 			map.setView(center, zoom);
 	},
@@ -691,7 +693,7 @@ var BookmarkControl = L.Control.extend({
 		container.setAttribute('aria-haspopup', true);
 
 		L.DomEvent.disableClickPropagation(container);
-		L.DomEvent.disableScrollPropagation(container);
+		L.DomEvent.disableScrollPropagation(container);	
 
 		var link = this._bookmarkLink = L.DomUtil.create('a', className + '-link', container);
 		link.href = '#';
@@ -717,9 +719,11 @@ var ThemeBookmarkControl = L.Control.Bookmark.extend({
 	initialize: function(options){
 		L.Util.setOptions(this, options);
 	},
-	_onClick : function(){
+	_onClick : function(e){
 		var map = this._map, zoom = this.options.zoom, center = this.options.center, className = 'leaflet-disabled';
 
+		L.DomEvent.preventDefault(e);
+		
 		if(!L.DomUtil.hasClass(this._bookmarkLink, className))
 			map.setView(center, zoom);
 	},
@@ -1161,7 +1165,9 @@ var ThemeControl = L.Control.extend({
 		L.DomEvent.off(this._container, 'click', this.onClick, this);
 	},
 
-	onClick: function(){
+	onClick: function(e){
+		L.DomEvent.preventDefault(e);
+
 		this._switch();
 		if(typeof this.options.func === 'function')
 			this.options.func();
