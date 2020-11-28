@@ -8,6 +8,8 @@
 		factory(global.L);
 }(this, function(exports){ 'use strict';
 
+var version = '1.0.0';
+
 /* Theme Zoom Control */
 var ThemeZoomControl = L.Control.Zoom.extend({
 	options: {
@@ -1228,6 +1230,8 @@ var ThemeControl = L.Control.extend({
 var themeControl = function(options){
 	return new ThemeControl(options);
 }
+
+exports.version = version;
 
 exports.ThemeZoomControl = ThemeZoomControl;
 exports.themeZoomControl = themeZoomControl;
