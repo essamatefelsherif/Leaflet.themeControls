@@ -768,7 +768,7 @@ var ThemeBookmarkControl = L.Control.Bookmark.extend({
 		var link = this._bookmarkLink = L.DomUtil.create('a', className + '-link', container);
 		link.href = '#';
 		link.title = this.options.title;
-		link.innerHTML = this.options.textButton;
+		link.innerHTML = '';
 
 		this._update();
 	},
@@ -785,10 +785,10 @@ var ThemeBookmarkControl = L.Control.Bookmark.extend({
 
 			L.DomUtil.remove(this._bookmarkLink);
 
-			this._bookmarkLink = L.DomUtil.create('a', options.className + '-link', container);
-			this._bookmarkLink.href = '#';
-			this._bookmarkLink.title = this.options.title;
-			this._bookmarkLink.innerHTML = this.options.textButton;
+			var link = this._bookmarkLink = L.DomUtil.create('a', options.className + '-link', container);
+			link.href = '#';
+			link.title = this.options.title;
+			link.innerHTML = '';
 
 			this._update();
 		}
@@ -807,10 +807,10 @@ var ThemeBookmarkControl = L.Control.Bookmark.extend({
 
 			L.DomUtil.remove(this._bookmarkLink);
 
-			this._bookmarkLink = L.DomUtil.create('a', className + '-link', container);
-			this._bookmarkLink.href = '#';
-			this._bookmarkLink.title = this.options.title;
-			this._bookmarkLink.innerHTML = this.options.textButton;
+			var link = this._bookmarkLink = L.DomUtil.create('a', className + '-link', container);
+			link.href = '#';
+			link.title = this.options.title;
+			link.innerHTML = this.options.textButton;
 
 			L.Control.Bookmark.prototype._update.call(this);
 		}
